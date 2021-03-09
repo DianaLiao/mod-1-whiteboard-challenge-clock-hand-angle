@@ -12,11 +12,13 @@ def clock_angle(time)
     relative_angle = nil
     abs_min_angle = min*6
 
-    if hour == 12
-        abs_hour_angle = 0
-    else
-        abs_hour_angle = hour*30 + min*0.5
-    end
+    # if hour == 12
+    #     abs_hour_angle = 0
+    # else
+    #     abs_hour_angle = hour*30 + min*0.5
+    # end
+
+    hour == 12 ? abs_hour_angle = 0 : abs_hour_angle = hour*30 + min*0.5
 
 
     if abs_min_angle > abs_hour_angle
@@ -27,5 +29,5 @@ def clock_angle(time)
         relative_angle = "I give up."
     end
 
-    relative_angle    
+    # relative_angle    
 end
